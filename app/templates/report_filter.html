@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>View Monthly Report</h2>
+
+<form method="get" action="/reports/monthly">
+    <label>
+        User ID:
+        <input type="number" name="user_id" required>
+    </label>
+    <br><br>
+
+    <label>
+        Month (YYYY-MM):
+        <input type="text" name="month" placeholder="2025-12" required>
+    </label>
+    <br><br>
+
+    <button type="submit">View Report</button>
+</form>
+
+{% endblock %}

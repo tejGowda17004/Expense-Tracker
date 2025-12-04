@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Set Budget</h2>
+
+<form method="post" action="/budgets/set-budget">
+    <label>
+        Month (YYYY-MM):
+        <input type="text" name="month" placeholder="2025-12" required>
+    </label>
+    <br><br>
+
+    <label>
+        Category:
+        <input type="text" name="category" required>
+    </label>
+    <br><br>
+
+    <label>
+        Limit:
+        <input type="number" step="0.01" name="limit" required>
+    </label>
+    <br><br>
+
+    <label>
+        User ID:
+        <input type="number" name="user_id" required>
+    </label>
+    <br><br>
+
+    <button type="submit">Save Budget</button>
+</form>
+
+{% endblock %}
