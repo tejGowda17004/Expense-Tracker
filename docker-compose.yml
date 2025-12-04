@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./expense.db
+      
+  #  email settings
+      - SMTP_USER=yourgmail@gmail.com
+      - SMTP_PASS=your_google_app_password
+      - SMTP_HOST=smtp.gmail.com
+      - SMTP_PORT=587
+
+    volumes:
+      - .:/app
